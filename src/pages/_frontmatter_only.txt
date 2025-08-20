@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const offices = [
+  {
+    country: "United States",
+    address: "1049 El Monte Avenue Ste C #684",
+    city: "Mountain View, CA 94040",
+    phone: "+1 (202) 992-5235",
+    email: "info@zekiexperts.com",
+    timezone: "PST",
+    flag: "🇺🇸",
+    coords: { lat: 37.3861, lng: -122.0839, name: "Mountain View" },
+    color: "#3b82f6"
+  },
+  {
+    country: "Pakistan", 
+    address: "Kickstart Building, 189 Korang Road",
+    city: "I-10/3 Islamabad",
+    phone: "+92 331 111 0214",
+    email: "info@zekiexperts.com",
+    timezone: "PKT",
+    flag: "🇵🇰",
+    coords: { lat: 33.6844, lng: 73.0479, name: "Islamabad" },
+    color: "#8b5cf6"
+  },
+  {
+    country: "United Kingdom",
+    address: "20-22 Wenlock Road",
+    city: "London, N1 7GU",
+    phone: "+44 20 7946 0958",
+    email: "uk@zekiexperts.com", 
+    timezone: "GMT",
+    flag: "🇬🇧",
+    coords: { lat: 51.5074, lng: -0.1278, name: "London" },
+    color: "#06b6d4"
+  }
+];
+
+const clientLocations = [
+  { lat: 40.7128, lng: -74.0060, name: "New York", clients: 15 },
+  { lat: 34.0522, lng: -118.2437, name: "Los Angeles", clients: 12 },
+  { lat: 51.5074, lng: -0.1278, name: "London", clients: 8 },
+  { lat: 48.8566, lng: 2.3522, name: "Paris", clients: 6 },
+  { lat: 35.6762, lng: 139.6503, name: "Tokyo", clients: 10 },
+  { lat: -33.8688, lng: 151.2093, name: "Sydney", clients: 7 },
+  { lat: 55.7558, lng: 37.6176, name: "Moscow", clients: 5 },
+  { lat: 39.9042, lng: 116.4074, name: "Beijing", clients: 9 },
+  { lat: 19.0760, lng: 72.8777, name: "Mumbai", clients: 11 },
+  { lat: 1.3521, lng: 103.8198, name: "Singapore", clients: 8 }
+];
+
+const faqs = [
+  {
+    question: "How quickly can you start my project?",
+    answer: "We can typically start your project within 24-48 hours after the initial consultation and requirement gathering. Our team is ready to move fast when you are."
+  },
+  {
+    question: "What is your development process?",
+    answer: "We follow an agile development methodology with regular sprints, daily standups, and continuous client communication. You'll have full visibility into the project progress at all times."
+  },
+  {
+    question: "Do you provide ongoing support?",
+    answer: "Yes, we offer comprehensive post-launch support including maintenance, updates, bug fixes, and feature enhancements to ensure your software continues to perform optimally."
+  },
+  {
+    question: "What technologies do you specialize in?",
+    answer: "We specialize in modern web and mobile technologies including React, Node.js, Python, React Native, Flutter, AWS, and more. Our team stays up-to-date with the latest industry trends."
+  }
+];
+---

@@ -1,0 +1,939 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const services = [
+  { name: "Cloud Strategy", icon: "fi fi-ss-cloud", level: 95 },
+  { name: "Digital Transformation", icon: "fi fi-ss-rocket", level: 93 },
+  { name: "Cybersecurity", icon: "fi fi-ss-lock", level: 90 },
+  { name: "Infrastructure Planning", icon: "fi fi-ss-building", level: 92 },
+  { name: "Technology Assessment", icon: "fi fi-ss-clipboard", level: 88 },
+  { name: "IT Governance", icon: "fi fi-ss-scale", level: 86 }
+];
+
+const consultingAreas = [
+  {
+    title: "Cloud Migration Strategy",
+    description: "Comprehensive cloud adoption roadmaps and migration planning",
+    image: "fi fi-ss-cloud",
+    tech: ["AWS", "Azure", "Migration Planning"],
+    features: ["Cost Optimization", "Risk Assessment", "Phased Migration"]
+  },
+  {
+    title: "Digital Transformation",
+    description: "End-to-end digital strategy and technology modernization",
+    image: "fi fi-ss-refresh",
+    tech: ["Process Automation", "API Strategy", "Legacy Modernization"],
+    features: ["Business Process Analysis", "Technology Roadmap", "Change Management"]
+  },
+  {
+    title: "IT Security Assessment",
+    description: "Comprehensive security audits and compliance frameworks",
+    image: "fi fi-ss-shield",
+    tech: ["Security Framework", "Compliance", "Risk Management"],
+    features: ["Vulnerability Assessment", "Security Policies", "Incident Response"]
+  }
+];
+
+const process = [
+  { step: "01", title: "Discovery & Assessment", description: "Analyzing your current IT infrastructure and business needs" },
+  { step: "02", title: "Strategy Development", description: "Creating comprehensive technology roadmaps and recommendations" },
+  { step: "03", title: "Implementation Planning", description: "Detailed project plans with timelines and resource allocation" },
+  { step: "04", title: "Ongoing Support", description: "Continuous monitoring and strategic guidance for long-term success" }
+];
+---
+
+<BaseLayout title="IT Consulting & Strategic Technology Services">
+  <!-- Hero Section with Advanced Animations -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-800 dark:to-orange-900">
+    <!-- Particle Canvas -->
+    <div class="absolute inset-0">
+      <canvas id="consulting-particles" class="w-full h-full"></canvas>
+    </div>
+    
+    <!-- Floating Tech Icon Shapes -->
+    <div class="absolute inset-0">
+      <div class="floating-tech tech-1"></div>
+      <div class="floating-tech tech-2"></div>
+      <div class="floating-tech tech-3"></div>
+      <div class="floating-tech tech-4"></div>
+    </div>
+    
+    <!-- Morphing Background Shapes -->
+    <div class="absolute inset-0">
+      <div class="morph-shape morph-1"></div>
+      <div class="morph-shape morph-2"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <!-- Animated Badge -->
+      <div class="animated-badge mb-8">
+        <span class="pulse-dot"></span>
+        IT Consulting & Strategic Technology
+      </div>
+      
+      <!-- Main Title with Advanced Animation -->
+      <h1 class="hero-title mb-6">
+        <span class="title-line">IT Strategy</span>
+        <span class="title-line gradient-text">That Delivers</span>
+      </h1>
+      
+      <!-- Enhanced Subtitle -->
+      <p class="hero-subtitle mb-12">
+        From cloud migration to digital transformation, we provide strategic IT consulting 
+        that aligns technology with your business objectives and drives measurable results.
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <a href="/contact" class="cta-primary">
+          <span>Start Your IT Strategy</span>
+          <div class="button-shine"></div>
+        </a>
+        
+        <div class="contact-info">
+          <span>Call us: </span>
+          <a href="tel:+12029925235" class="phone-link">+1 (202) 992-5235</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IT Services Section -->
+  <section class="py-32 bg-white dark:bg-gray-900 relative overflow-hidden">
+    <!-- Morphing Background Shapes -->
+    <div class="absolute inset-0">
+      <div class="morph-shape morph-3"></div>
+      <div class="morph-shape morph-4"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h2 class="section-title mb-6">Our IT Consulting Services</h2>
+        <div class="title-underline mx-auto"></div>
+        <p class="section-subtitle mt-6">
+          Strategic technology consulting across all areas of IT infrastructure and operations
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((service, index) => (
+          <div class="tech-card" data-aos="zoom-in" data-aos-delay={index * 100}>
+            <div class="tech-icon"><i class={service.icon}></i></div>
+            <h3 class="tech-name">{service.name}</h3>
+            <div class="tech-progress">
+              <div class="tech-progress-bar" style={`width: ${service.level}%`}></div>
+            </div>
+            <span class="tech-level">{service.level}%</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Consulting Areas Section -->
+  <section class="py-32 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+    <!-- Animated Grid Background -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="animated-grid"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h2 class="section-title mb-6">Featured Consulting Areas</h2>
+        <div class="title-underline mx-auto"></div>
+        <p class="section-subtitle mt-6">
+          Examples of strategic IT consulting engagements we've delivered for clients
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {consultingAreas.map((area, index) => (
+          <div class="project-card" data-aos="fade-up" data-aos-delay={index * 150}>
+            <div class="project-icon"><i class={area.image}></i></div>
+            <h3 class="project-title">{area.title}</h3>
+            <p class="project-description">{area.description}</p>
+            
+            <div class="project-tech">
+              {area.tech.map((tech) => (
+                <span class="tech-badge">{tech}</span>
+              ))}
+            </div>
+            
+            <div class="project-features">
+              {area.features.map((feature) => (
+                <div class="feature-item">
+                  <svg class="feature-check" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  {feature}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="py-32 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h2 class="section-title mb-6">Our IT Consulting Process</h2>
+        <div class="title-underline mx-auto"></div>
+        <p class="section-subtitle mt-6">
+          From initial assessment to implementation, a structured approach to IT transformation
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {process.map((step, index) => (
+          <div class="process-card" data-aos="fade-up" data-aos-delay={index * 100}>
+            <div class="process-step">{step.step}</div>
+            <h3 class="process-title">{step.title}</h3>
+            <p class="process-description">{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-32 bg-gradient-to-r from-orange-600 via-red-600 to-orange-600 relative overflow-hidden animated-gradient">
+    <!-- Animated Background Pattern -->
+    <div class="absolute inset-0 opacity-20">
+      <div class="animated-pattern"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="cta-title mb-8">
+        Ready to Transform Your IT Strategy?
+      </h2>
+      <p class="cta-subtitle mb-12">
+        Let's develop a comprehensive IT roadmap that aligns technology with your business goals and drives sustainable growth.
+      </p>
+      
+      <div class="cta-buttons">
+        <a href="/contact" class="cta-primary">
+          <span>Get Started Today</span>
+          <div class="button-shine"></div>
+        </a>
+        
+        <div class="contact-info">
+          <span>Call us: </span>
+          <a href="tel:+12029925235" class="phone-link">+1 (202) 992-5235</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advanced Styles and Animations -->
+  <style>
+    /* Floating Tech Icon Shapes */
+    .floating-tech {
+      position: absolute;
+      background: linear-gradient(45deg, rgba(249, 115, 22, 0.1), rgba(239, 68, 68, 0.1));
+      border: 1px solid rgba(249, 115, 22, 0.15);
+      border-radius: 16px;
+      animation: float-consulting 32s infinite ease-in-out;
+      backdrop-filter: blur(15px);
+    }
+    
+    .tech-1 { width: 90px; height: 90px; top: 8%; left: 14%; animation-delay: 0s; }
+    .tech-2 { width: 70px; height: 70px; top: 18%; right: 22%; animation-delay: 8s; }
+    .tech-3 { width: 80px; height: 80px; top: 58%; left: 20%; animation-delay: 16s; }
+    .tech-4 { width: 75px; height: 75px; top: 68%; right: 28%; animation-delay: 24s; }
+    
+    @keyframes float-consulting {
+      0%, 100% { transform: translate(0px, 0px) rotate(0deg) scale(1); opacity: 0.4; }
+      25% { transform: translate(18px, -28px) rotate(3deg) scale(1.1); opacity: 0.7; }
+      50% { transform: translate(-22px, 32px) rotate(-3deg) scale(0.9); opacity: 0.3; }
+      75% { transform: translate(28px, 18px) rotate(2deg) scale(1.05); opacity: 0.8; }
+    }
+    
+    /* Morphing Background Shapes */
+    .morph-shape {
+      position: absolute;
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      animation: morph-consulting 29s ease-in-out infinite;
+      opacity: 0.12;
+    }
+    
+    .dark .morph-shape {
+      opacity: 0.1;
+    }
+    
+    .morph-1 {
+      width: 420px;
+      height: 420px;
+      background: linear-gradient(45deg, #f97316, #ef4444);
+      top: 3%;
+      left: 1%;
+      animation-delay: 0s;
+    }
+    
+    .morph-2 {
+      width: 340px;
+      height: 340px;
+      background: linear-gradient(45deg, #3b82f6, #f97316);
+      bottom: 8%;
+      right: 3%;
+      animation-delay: 14s;
+    }
+    
+    .morph-3 {
+      width: 380px;
+      height: 380px;
+      background: linear-gradient(45deg, #ef4444, #8b5cf6);
+      top: 12%;
+      left: 2%;
+      animation-delay: 8s;
+    }
+    
+    .morph-4 {
+      width: 400px;
+      height: 400px;
+      background: linear-gradient(45deg, #10b981, #f97316);
+      bottom: 12%;
+      right: 6%;
+      animation-delay: 22s;
+    }
+    
+    @keyframes morph-consulting {
+      0%, 100% { 
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: translate(0px, 0px) rotate(0deg);
+      }
+      50% { 
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        transform: translate(55px, -55px) rotate(180deg);
+      }
+    }
+    
+    /* Animated Badge */
+    .animated-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 16px 32px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50px;
+      color: #f97316;
+      font-weight: 600;
+      font-size: 0.95rem;
+      animation: badge-float 3s ease-in-out infinite;
+    }
+    
+    .dark .animated-badge {
+      color: #fb923c;
+    }
+    
+    .pulse-dot {
+      width: 10px;
+      height: 10px;
+      background: #f97316;
+      border-radius: 50%;
+      margin-right: 12px;
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    
+    @keyframes badge-float {
+      0%, 100% { transform: translateY(0px); box-shadow: 0 10px 30px rgba(249, 115, 22, 0.2); }
+      50% { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(249, 115, 22, 0.4); }
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); }
+      50% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(249, 115, 22, 0); }
+    }
+    
+    /* Hero Title Animation */
+    .hero-title {
+      font-size: clamp(3rem, 8vw, 7rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: #1f2937;
+      text-align: center;
+      overflow: hidden;
+    }
+    
+    .dark .hero-title {
+      color: #ffffff;
+    }
+    
+    .title-line {
+      display: block;
+      animation: slide-up-stagger 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    
+    .title-line:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(45deg, #f97316, #ef4444, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-size: 200% 200%;
+      animation: gradient-shift 3s ease-in-out infinite;
+    }
+    
+    @keyframes slide-up-stagger {
+      0% { transform: translateY(100%); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    
+    @keyframes gradient-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    
+    /* Hero Subtitle */
+    .hero-subtitle {
+      font-size: clamp(1.125rem, 3vw, 1.5rem);
+      color: #6b7280;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      animation: fade-in-up 1.5s cubic-bezier(0.23, 1, 0.32, 1) 0.4s both;
+    }
+    
+    .dark .hero-subtitle {
+      color: #ffffff !important;
+      font-weight: 500;
+    }
+    
+    @keyframes fade-in-up {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    
+    /* Section Styling */
+    .section-title {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 900;
+      color: #1f2937;
+      text-align: center;
+    }
+    
+    .dark .section-title {
+      color: #ffffff;
+      text-shadow: 0 0 30px rgba(249, 115, 22, 0.5);
+    }
+    
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: #6b7280;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    
+    .dark .section-subtitle {
+      color: #ffffff !important;
+      font-weight: 500;
+    }
+    
+    .title-underline {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(45deg, #f97316, #ef4444);
+      border-radius: 2px;
+      animation: expand-underline 2s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    
+    @keyframes expand-underline {
+      0% { width: 0; }
+      100% { width: 80px; }
+    }
+    
+    /* Technology Cards */
+    .tech-card {
+      position: relative;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(239, 68, 68, 0.18));
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(249, 115, 22, 0.25);
+      border-radius: 20px;
+      text-align: center;
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(249, 115, 22, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+    
+    .dark .tech-card {
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.25), rgba(239, 68, 68, 0.3));
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      box-shadow: 0 8px 32px rgba(239, 68, 68, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    }
+    
+    .tech-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(249, 115, 22, 0.3);
+    }
+    
+    .tech-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .tech-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+    
+    .dark .tech-name {
+      color: #ffffff;
+    }
+    
+    .tech-progress {
+      width: 100%;
+      height: 6px;
+      background: rgba(249, 115, 22, 0.1);
+      border-radius: 3px;
+      margin-bottom: 0.5rem;
+      overflow: hidden;
+    }
+    
+    .tech-progress-bar {
+      height: 100%;
+      background: linear-gradient(45deg, #f97316, #ef4444);
+      border-radius: 3px;
+      animation: progress-fill 2s ease-out 0.5s both;
+    }
+    
+    @keyframes progress-fill {
+      0% { width: 0%; }
+    }
+    
+    .tech-level {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #f97316;
+    }
+    
+    .dark .tech-level {
+      color: #fb923c;
+    }
+    
+    /* Project Cards */
+    .project-card {
+      position: relative;
+      padding: 2.5rem 2rem;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(147, 51, 234, 0.18));
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      border-radius: 24px;
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+    
+    .dark .project-card {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(147, 51, 234, 0.3));
+      border: 1px solid rgba(147, 51, 234, 0.4);
+      box-shadow: 0 8px 32px rgba(147, 51, 234, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    }
+    
+    .project-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 30px 60px rgba(239, 68, 68, 0.3);
+    }
+    
+    .project-icon {
+      font-size: 4rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .dark .project-title {
+      color: #ffffff;
+    }
+    
+    .project-description {
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      line-height: 1.6;
+    }
+    
+    .dark .project-description {
+      color: #ffffff !important;
+      font-weight: 500;
+    }
+    
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .project-features {
+      space-y: 0.5rem;
+    }
+    
+    /* Process Cards */
+    .process-card {
+      text-align: center;
+      padding: 2rem 1rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .process-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .process-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 4rem;
+      height: 4rem;
+      background: linear-gradient(45deg, #f97316, #ef4444);
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+    }
+    
+    .process-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+    
+    .dark .process-title {
+      color: #ffffff;
+    }
+    
+    .process-description {
+      color: #6b7280;
+      line-height: 1.6;
+    }
+    
+    .dark .process-description {
+      color: #ffffff !important;
+      font-weight: 500;
+    }
+    
+    /* Tech badges and other common elements */
+    .tech-badge {
+      padding: 0.5rem 1rem;
+      background: rgba(249, 115, 22, 0.1);
+      color: #f97316;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      border: 1px solid rgba(249, 115, 22, 0.2);
+    }
+    
+    .dark .tech-badge {
+      background: rgba(249, 115, 22, 0.2);
+      color: #fb923c;
+      border: 1px solid rgba(249, 115, 22, 0.3);
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      font-size: 0.875rem;
+      color: #6b7280;
+      margin-bottom: 0.5rem;
+    }
+    
+    .dark .feature-item {
+      color: #ffffff !important;
+      font-weight: 500;
+    }
+    
+    .feature-check {
+      width: 1rem;
+      height: 1rem;
+      color: #10b981;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+    
+    /* CTA Styles */
+    .cta-primary {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 1.25rem 3rem;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
+      color: white;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+    
+    .cta-primary:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    }
+    
+    .button-shine {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      opacity: 0;
+    }
+    
+    .cta-primary:hover .button-shine {
+      opacity: 1;
+      transform: rotate(45deg) translate(50%, 50%);
+    }
+    
+    .cta-title {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 900;
+      color: white;
+      text-align: center;
+    }
+    
+    .cta-subtitle {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    @media (min-width: 640px) {
+      .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+    
+    .contact-info {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1rem;
+    }
+    
+    .phone-link {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .phone-link:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .animated-gradient {
+      background-size: 400% 400%;
+      animation: gradient-flow 8s ease infinite;
+    }
+    
+    @keyframes gradient-flow {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    
+    .animated-pattern {
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.2) 2px, transparent 2px),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+      background-size: 60px 60px;
+      animation: pattern-move 20s linear infinite;
+    }
+    
+    @keyframes pattern-move {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(60px, 60px); }
+    }
+    
+    .animated-grid {
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(249, 115, 22, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(249, 115, 22, 0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: grid-move 20s linear infinite;
+    }
+    
+    @keyframes grid-move {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+    
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <!-- Advanced Particle System -->
+  <script>
+    class ConsultingParticleSystem {
+      constructor(canvas) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.particles = [];
+        this.particleCount = 26;
+        this.mouse = { x: 0, y: 0 };
+        this.init();
+      }
+      
+      init() {
+        this.resize();
+        this.createParticles();
+        this.bindEvents();
+        this.animate();
+      }
+      
+      resize() {
+        this.canvas.width = this.canvas.offsetWidth;
+        this.canvas.height = this.canvas.offsetHeight;
+      }
+      
+      createParticles() {
+        for (let i = 0; i < this.particleCount; i++) {
+          this.particles.push({
+            x: Math.random() * this.canvas.width,
+            y: Math.random() * this.canvas.height,
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: (Math.random() - 0.5) * 0.3,
+            radius: Math.random() * 2 + 1,
+            opacity: Math.random() * 0.4 + 0.1,
+            color: Math.random() > 0.6 ? '#f97316' : '#ef4444'
+          });
+        }
+      }
+      
+      bindEvents() {
+        window.addEventListener('resize', () => this.resize());
+        this.canvas.addEventListener('mousemove', (e) => {
+          const rect = this.canvas.getBoundingClientRect();
+          this.mouse.x = e.clientX - rect.left;
+          this.mouse.y = e.clientY - rect.top;
+        });
+      }
+      
+      updateParticles() {
+        this.particles.forEach(particle => {
+          particle.x += particle.vx;
+          particle.y += particle.vy;
+          
+          // Mouse interaction
+          const dx = this.mouse.x - particle.x;
+          const dy = this.mouse.y - particle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance < 80) {
+            const force = (80 - distance) / 80;
+            particle.vx += dx * force * 0.0006;
+            particle.vy += dy * force * 0.0006;
+          }
+          
+          // Boundary bounce
+          if (particle.x <= 0 || particle.x >= this.canvas.width) {
+            particle.vx *= -1;
+          }
+          if (particle.y <= 0 || particle.y >= this.canvas.height) {
+            particle.vy *= -1;
+          }
+          
+          // Keep within bounds
+          particle.x = Math.max(0, Math.min(this.canvas.width, particle.x));
+          particle.y = Math.max(0, Math.min(this.canvas.height, particle.y));
+          
+          // Damping
+          particle.vx *= 0.99;
+          particle.vy *= 0.99;
+        });
+      }
+      
+      drawParticles() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        // Draw connections
+        this.particles.forEach((particle, i) => {
+          this.particles.slice(i + 1).forEach(otherParticle => {
+            const dx = particle.x - otherParticle.x;
+            const dy = particle.y - otherParticle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < 100) {
+              this.ctx.beginPath();
+              this.ctx.strokeStyle = `rgba(249, 115, 22, ${(100 - distance) / 100 * 0.15})`;
+              this.ctx.lineWidth = 1;
+              this.ctx.moveTo(particle.x, particle.y);
+              this.ctx.lineTo(otherParticle.x, otherParticle.y);
+              this.ctx.stroke();
+            }
+          });
+        });
+        
+        // Draw particles
+        this.particles.forEach(particle => {
+          this.ctx.beginPath();
+          this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+          this.ctx.fillStyle = particle.color;
+          this.ctx.globalAlpha = particle.opacity;
+          this.ctx.fill();
+          this.ctx.globalAlpha = 1;
+        });
+      }
+      
+      animate() {
+        this.updateParticles();
+        this.drawParticles();
+        requestAnimationFrame(() => this.animate());
+      }
+    }
+    
+    // Initialize when DOM is ready
+    document.addEventListener('DOMContentLoaded', () => {
+      const canvas = document.getElementById('consulting-particles');
+      if (canvas) {
+        new ConsultingParticleSystem(canvas);
+      }
+    });
+  </script>
+</BaseLayout>

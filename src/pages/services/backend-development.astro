@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const technologies = [
+  {
+    category: "Server Technologies",
+    items: ["Node.js", "Python", "Laravel", "Ruby on Rails"]
+  },
+  {
+    category: "Enterprise Frameworks", 
+    items: ["Spring", "Django", ".NET", "Express.js"]
+  },
+  {
+    category: "Database Systems",
+    items: ["MySQL", "PostgreSQL", "MongoDB", "Oracle"]
+  }
+];
+
+const capabilities = [
+  {
+    title: "API Development",
+    description: "RESTful and GraphQL APIs designed for scalability and performance"
+  },
+  {
+    title: "Database Architecture", 
+    description: "Optimized database design and management for efficient data operations"
+  },
+  {
+    title: "Cloud Integration",
+    description: "Seamless integration with cloud platforms and modern infrastructure"
+  },
+  {
+    title: "Security Implementation",
+    description: "Enterprise-grade security measures and data protection protocols"
+  }
+];
+---
+
+<BaseLayout title="Backend Development Services">
+  <!-- Hero Section -->
+  <section class="py-24 lg:py-32 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-black dark:text-white mb-6">
+        Backend Development
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8">
+        Scalable server-side solutions and robust API development.
+        Get matched with expert backend developers in 24 hours.
+      </p>
+      <a href="/contact" class="bg-black text-white px-8 py-4 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+        Find Backend Developers
+      </a>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-black dark:text-white mb-4">
+          Backend Technologies
+        </h2>
+        <p class="text-xl text-gray-600">
+          Powerful server-side technologies for robust, scalable applications
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {technologies.map((tech) => (
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+            <h3 class="text-xl font-semibold text-black dark:text-white mb-6">{tech.category}</h3>
+            <div class="space-y-3">
+              {tech.items.map((item) => (
+                <div class="flex items-center">
+                  <div class="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
+                  <span class="text-gray-700">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-black dark:text-white mb-4">
+          Backend Development Capabilities
+        </h2>
+        <p class="text-xl text-gray-600">
+          Comprehensive server-side solutions for modern applications
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {capabilities.map((capability) => (
+          <div class="p-8 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800 shadow-sm">
+            <h3 class="text-lg font-semibold text-black dark:text-white mb-3">
+              {capability.title}
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              {capability.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Section -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-black dark:text-white mb-4">
+          Backend Architecture Approach
+        </h2>
+        <p class="text-xl text-gray-600">
+          Building robust, scalable systems from the ground up
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-12 h-12 bg-orange-600 text-white rounded-xl flex items-center justify-center font-bold text-lg mb-4 mx-auto">
+            1
+          </div>
+          <h3 class="text-lg font-semibold text-black dark:text-white mb-3">Architecture Planning</h3>
+          <p class="text-gray-600 text-sm">Design scalable system architecture and database structure</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-12 h-12 bg-orange-600 text-white rounded-xl flex items-center justify-center font-bold text-lg mb-4 mx-auto">
+            2
+          </div>
+          <h3 class="text-lg font-semibold text-black dark:text-white mb-3">API Development</h3>
+          <p class="text-gray-600 text-sm">Build robust, well-documented APIs with proper authentication</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-12 h-12 bg-orange-600 text-white rounded-xl flex items-center justify-center font-bold text-lg mb-4 mx-auto">
+            3
+          </div>
+          <h3 class="text-lg font-semibold text-black dark:text-white mb-3">Testing & Security</h3>
+          <p class="text-gray-600 text-sm">Comprehensive testing and implementation of security best practices</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-12 h-12 bg-orange-600 text-white rounded-xl flex items-center justify-center font-bold text-lg mb-4 mx-auto">
+            4
+          </div>
+          <h3 class="text-lg font-semibold text-black dark:text-white mb-3">Deployment & Monitoring</h3>
+          <p class="text-gray-600 text-sm">Production deployment with monitoring and performance optimization</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-black text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Need Robust Backend Solutions?
+      </h2>
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+        Connect with experienced backend developers who can build scalable, secure server-side solutions for your applications.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact" class="bg-white dark:bg-gray-800 text-black dark:text-white px-8 py-4 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+          Get Backend Developers
+        </a>
+        <div class="text-gray-400">
+          Call: <a href="tel:+12029925235" class="text-white hover:text-gray-300">+1 (202) 992-5235</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
