@@ -137,19 +137,19 @@ const technologies = [
         
         <!-- Interactive Feature Cards -->
         <div class="feature-cards-container">
-          <div class="feature-card card-1">
+          <div class="feature-card card-tinted card-1">
             <div class="feature-icon">🎯</div>
             <h3>Precision Matching</h3>
             <p>AI-powered algorithm matches your exact requirements</p>
           </div>
           
-          <div class="feature-card card-2">
+          <div class="feature-card card-tinted card-2">
             <div class="feature-icon">⚡</div>
             <h3>Lightning Fast</h3>
             <p>Get matched and start working within 24 hours</p>
           </div>
           
-          <div class="feature-card card-3">
+          <div class="feature-card card-tinted card-3">
             <div class="feature-icon">🛡️</div>
             <h3>Risk-Free</h3>
             <p>100% satisfaction guarantee on every placement</p>
@@ -171,7 +171,7 @@ const technologies = [
       
       <div class="values-grid">
         {values.map((value, index) => (
-          <div class="value-card" data-tilt data-aos="fade-up" data-aos-delay={index * 150}>
+          <div class="value-card card-tinted" data-tilt data-aos="fade-up" data-aos-delay={index * 150}>
             <div class="value-icon">{value.icon}</div>
             <h3 class="value-title">{value.title}</h3>
             <p class="value-description">{value.description}</p>

@@ -119,25 +119,25 @@ const faqs = [
       </div>
       
       <div class="stats-grid">
-        <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="stat-card card-tinted" data-aos="zoom-in" data-aos-delay="0">
           <div class="stat-icon"><i class="fi fi-ss-bolt"></i></div>
           <div class="stat-number">24h</div>
           <div class="stat-label">Average Match Time</div>
         </div>
         
-        <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="stat-card card-tinted" data-aos="zoom-in" data-aos-delay="100">
           <div class="stat-icon">👥</div>
           <div class="stat-number">500+</div>
           <div class="stat-label">Expert Developers</div>
         </div>
         
-        <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="stat-card card-tinted" data-aos="zoom-in" data-aos-delay="200">
           <div class="stat-icon"><i class="fi fi-ss-target"></i></div>
           <div class="stat-number">98%</div>
           <div class="stat-label">Success Rate</div>
         </div>
         
-        <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="stat-card card-tinted" data-aos="zoom-in" data-aos-delay="300">
           <div class="stat-icon">🌍</div>
           <div class="stat-number">50+</div>
           <div class="stat-label">Countries Served</div>
@@ -166,7 +166,7 @@ const faqs = [
       <div class="flex justify-center">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
           {offices.map((office, index) => (
-            <div class="office-card">
+            <div class="office-card card-tinted">
             
             <div class="relative">
               <!-- Flag Icon -->
@@ -221,7 +221,7 @@ const faqs = [
       
       <div class="faq-container">
         {faqs.map((faq, index) => (
-          <div class="faq-item" data-aos="fade-up" data-aos-delay={(index * 100).toString()}>
+          <div class="faq-item card-tinted" data-aos="fade-up" data-aos-delay={(index * 100).toString()}>
             <details class="faq-details group">
               <summary class="faq-question">
                 <h3 class="question-text">{faq.question}</h3>

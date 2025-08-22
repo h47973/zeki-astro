@@ -111,7 +111,7 @@ const stats = [
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {services.map((service, index) => (
           <a href={service.href} class="group block">
-            <div class="service-card" data-aos="zoom-in" data-aos-delay={index * 150}>
+            <div class="service-card card-tinted" data-aos="zoom-in" data-aos-delay={index * 150}>
               <!-- Gradient border on hover -->
               <div class={`absolute inset-0 bg-gradient-to-r ${service.gradient} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10`}>
                 <div class="absolute inset-[2px] bg-white dark:bg-gray-800 rounded-3xl"></div>

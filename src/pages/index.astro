@@ -95,17 +95,17 @@ const services = [
       </h1>
       
       <!-- Enhanced Subtitle -->
-      <p class="hero-subtitle mb-12">
+      <p class="hero-subtitle text-neutral-700 dark:text-white mb-12">
         Skip the lengthy hiring process. Get matched with vetted, skilled developers 
         who fit your project needs and work in your timezone.
       </p>
       
       <!-- CTA Buttons -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-        <button class="group relative px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25">
+        <a href="/contact" aria-label="Start hiring developers now" class="group relative px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25">
           <span class="relative z-10">Start Hiring Now</span>
           <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-        </button>
+        </a>
         
         <a href="/contact" class="px-8 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 font-medium rounded-xl hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-200 hover:scale-105 hover:shadow-lg">
           Schedule a Call
@@ -115,7 +115,7 @@ const services = [
       <!-- Enhanced Stats with Glassmorphism -->
       <div class="stats-container">
         {stats.map((stat, index) => (
-          <div class="stat-item" data-aos="zoom-in" data-aos-delay={index * 100}>
+          <div class="stat-item card-tinted mt-4" data-aos="zoom-in" data-aos-delay={index * 100}>
             <div class="stat-value">{stat.value}</div>
             <div class="stat-label">{stat.label}</div>
           </div>
@@ -144,7 +144,7 @@ const services = [
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {services.map((service, index) => (
-          <div class="service-card group" data-aos="zoom-in" data-aos-delay={index * 150}>
+          <div class="service-card card-tinted group mt-4" data-aos="zoom-in" data-aos-delay={index * 150}>
             <!-- Gradient Border on Hover -->
             <div class={`absolute inset-0 bg-gradient-to-r ${service.gradient} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10`}>
               <div class="absolute inset-[2px] bg-white dark:bg-gray-800 rounded-3xl"></div>
@@ -188,7 +188,7 @@ const services = [
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {testimonials.map((testimonial, index) => (
-          <div class="testimonial-card" data-aos="fade-up" data-aos-delay={index * 150}>
+          <div class="testimonial-card card-tinted mt-4" data-aos="fade-up" data-aos-delay={index * 150}>
             <div class="flex items-center mb-6">
               <div class="testimonial-avatar">
                 {testimonial.avatar}

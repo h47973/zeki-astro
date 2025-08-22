@@ -117,7 +117,7 @@ const process = [
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {platforms.map((platform, index) => (
-          <div class="tech-card" data-aos="zoom-in" data-aos-delay={index * 100}>
+          <div class="tech-card card-tinted" data-aos="zoom-in" data-aos-delay={index * 100}>
             <div class="tech-icon">{platform.icon}</div>
             <h3 class="tech-name">{platform.name}</h3>
             <div class="tech-progress">
@@ -148,7 +148,7 @@ const process = [
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {apps.map((app, index) => (
-          <div class="project-card" data-aos="fade-up" data-aos-delay={index * 150}>
+          <div class="project-card card-tinted" data-aos="fade-up" data-aos-delay={index * 150}>
             <div class="project-icon">{app.image}</div>
             <h3 class="project-title">{app.title}</h3>
             <p class="project-description">{app.description}</p>
@@ -188,7 +188,7 @@ const process = [
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {process.map((step, index) => (
-          <div class="process-card" data-aos="fade-up" data-aos-delay={index * 100}>
+          <div class="process-card card-tinted" data-aos="fade-up" data-aos-delay={index * 100}>
             <div class="process-step">{step.step}</div>
             <h3 class="process-title">{step.title}</h3>
             <p class="process-description">{step.description}</p>
